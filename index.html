@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimun-scale=1.0,user-scalable=no" />
+<title>找不同色块——CJ</title>
+<link rel="stylesheet" type="text/css" href="css/game.css">
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/game.js"></script>
+</head>
+<body>
+	<div id="start">
+		<img src="images/music-head.png" class="music-head">
+		<div id="chooseMusic">
+			<div onclick="playMusic(this)" data-music="欧兜拜.mp3"></div>
+			<div onclick="playMusic(this)" data-music="不想长大.mp3"></div>
+			<div onclick="playMusic(this)" data-music="我的地盘.mp3"></div>
+			<div onclick="playMusic(this)" data-music="痒.mp3"></div>
+		</div>
+		<div>
+			<div id="prevGameStart"></div>
+			<img src="images/playStartBtn.png" class="startPlayBtn" onclick="gameStart()">
+		</div>
+	</div>
+	<div id="container">
+		<div id="game-head">
+			<div style="height:20%">
+				<p class="firstp">剩余时间：<b id="remain-time">100</b>s</p>
+				<p class="secondp">第<b id="num"></b>关</p>
+			</div>
+			<div id="banner">
+				<img src="images/ban-bg1.png">
+				<img src="images/ban-bg2.png">
+				<img src="images/ban-bg3.png">
+			</div>
+		</div>
+		<div id="game-body"></div>
+	</div>
+	<div id="end-oper">
+		<div id="score">
+			<p><img src="images/yourScore.png"></p>
+			<p><i id="yourScore"></i></p>
+			<p><img src="images/playAgain.png" onclick="playAgain()"></p>
+		</div>
+	</div>
+	<audio id="myaudio" src="" controls="controls" loop="true" hidden="true">
+</body>
+</html>
