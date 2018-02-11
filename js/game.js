@@ -121,24 +121,24 @@ function imgAnimate(){
 
 function playMusic(i){
 	$("#prevGameStart").hide();
-	$("#myaudio").attr("src","../music/"+$(i).attr("data-music"));
+	$("#myaudio").attr("src","music/"+$(i).attr("data-music"));
 	$("#myaudio")[0].play();
 	var index = $(i).index();
 	switch(index){
 		case 0:
-			$("#start .music-head").eq(0).attr("src","../images/ts1.png");
+			$("#start .music-head").eq(0).attr("src","images/ts1.png");
 			break;
 		case 1:
-			$("#start .music-head").eq(0).attr("src","../images/js.png");
+			$("#start .music-head").eq(0).attr("src","images/js.png");
 			break;
 		case 2:
-			$("#start .music-head").eq(0).attr("src","../images/cj.png");
+			$("#start .music-head").eq(0).attr("src","images/cj.png");
 			break;
 		case 3:
-			$("#start .music-head").eq(0).attr("src","../images/ts2.png");
+			$("#start .music-head").eq(0).attr("src","images/ts2.png");
 			break;
 		default:
-			$("#start .music-head").eq(0).attr("src","../images/music-head.png");
+			$("#start .music-head").eq(0).attr("src","images/music-head.png");
 			break;
 	}
 
