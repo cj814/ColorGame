@@ -1,7 +1,7 @@
-var n = 1;
-var num = 1;
-var imgIndex = 1;
-var remain_time = parseInt($("#remain-time").html());
+var n = 1; //每行显示多少个方块
+var num = 1; //游戏关数
+var imgIndex = 1; //游戏中轮播图切换
+var remain_time = parseInt($("#remain-time").html()); //剩余时间
 
 $(document).ready(function(){	
 	var $elie = $("#chooseMusic");
@@ -22,6 +22,7 @@ $(document).ready(function(){
 	},1000);
 });
 
+//初始化
 function init(){
 	$("#game-body").empty();
 	if(n >= 7){
@@ -54,6 +55,7 @@ function init(){
 	$(".block").eq(parseInt(Math.random()*n*n)).css("background-color","rgb("+rgb1+","+rgb2+","+(rgb3+50)+")");
 }
 
+//游戏开始
 function gameStart(){
 	$("#start").fadeOut(1000);
 	$("#container").fadeIn(1000);
@@ -76,6 +78,7 @@ function gameStart(){
 	},1000);
 }
 
+//选择不同色块
 function chooseDiff(index){
 	var mathNum = $(index).index();
 	if(mathNum == n*n-1){
@@ -103,11 +106,13 @@ function chooseDiff(index){
 	}
 }
 
+//再玩一次
 function playAgain(){
 	// window.location.href="";
 	window.location.reload();
 }
 
+//图片动画
 function imgAnimate(){
 	var imgLen = $("#banner img").length;
 	setInterval(function(){
@@ -119,6 +124,7 @@ function imgAnimate(){
 	},6000);
 }
 
+//播放背景音乐
 function playMusic(i){
 	$("#prevGameStart").hide();
 	$("#myaudio").attr("src","music/"+$(i).attr("data-music"));
